@@ -36,7 +36,7 @@ ps: Please refer to the [official mmediting instructions](https://mmediting.read
 3. Modify the bash file `train.sh` as follows:
 ```
 # modify the number of gpus, config path and outdir path.
-PYTHONPATH=$PWD:$PYTHONPATH mim train mmedit /home/chenz/NTIRE2022/NTIRE2022/SCET_mim/config/SCET_x3_128.py --gpus 1 --work-dir MyExperiment
+PYTHONPATH=$PWD:$PYTHONPATH mim train mmedit ./config/SCETx2.py --gpus 1 --work-dir {Your save ckpt path}
 ```
 
 4. train SCET network, as follows:
@@ -56,7 +56,7 @@ PYTHONPATH=$PWD:$PYTHONPATH mim test mmedit ./config/SCET_x2.py --checkpoint ./w
 ```
 cd SCET
 
-bash train.sh
+bash test.sh
 
 ```
 If you find this repo useful for your research, please consider citing the papers.
