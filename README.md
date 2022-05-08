@@ -44,7 +44,6 @@ PYTHONPATH=$PWD:$PYTHONPATH mim train mmedit ./config/SCETx2.py --gpus 1 --work-
 cd SCET
 
 bash train.sh
-
 ```
 ## How to use the code to test SCET network.
 1. Modify the bash file `test.sh` as follows:
@@ -57,7 +56,6 @@ PYTHONPATH=$PWD:$PYTHONPATH mim test mmedit ./config/SCET_x2.py --checkpoint ./w
 cd SCET
 
 bash test.sh
-
 ```
 If you find this repo useful for your research, please consider citing the papers.
 ```
