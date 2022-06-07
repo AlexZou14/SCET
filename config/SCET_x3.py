@@ -36,7 +36,7 @@ train_pipeline = [
         mean=[0, 0, 0],
         std=[1, 1, 1],
         to_rgb=True),
-    dict(type='PairedRandomCrop', gt_patch_size=128),
+    dict(type='PairedRandomCrop', gt_patch_size=192),
     dict(
         type='Flip', keys=['lq', 'gt'], flip_ratio=0.5,
         direction='horizontal'),
@@ -97,7 +97,7 @@ data = dict(
         filename_tmpl='{}'))
 
 # optimizer
-optimizers = dict(generator=dict(type='AdamW', lr=1e-4, betas=(0.9, 0.999), weight_decay=0.05))
+optimizers = dict(generator=dict(type='Adam', lr=1e-4, betas=(0.9, 0.999)))
 
 # learning policy
 total_iters = 1000000
