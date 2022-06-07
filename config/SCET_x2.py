@@ -97,7 +97,7 @@ data = dict(
         filename_tmpl='{}'))
 
 # optimizer
-optimizers = dict(generator=dict(type='AdamW', lr=1e-4, betas=(0.9, 0.999), weight_decay=0.05))
+optimizers = dict(generator=dict(type='Adam', lr=1e-4, betas=(0.9, 0.999)))
 
 # learning policy
 total_iters = 1000000
